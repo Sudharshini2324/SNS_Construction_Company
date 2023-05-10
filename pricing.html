@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Construction Company Website</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <a href="#" class="logo"><img style="width: 80px; height: 80px;border-radius: 47%;"src="images/download13.jpg"/> <p style="font-family: cursive;">SNS <span>Build</span></p></a>
+
+   <nav class="navbar">
+      <a href="./new.html">home</a>
+      <a href="./about.html">about</a>
+      <a href="./services.html">services</a>
+      <a href="./projects.html">projects</a>
+      <a href="./pricing.html">pricing</a>
+      <a href="http://localhost/webpage/contact%20form/index.php">contact</a>
+      <a href="./blogs.html">blogs</a>
+      <a href="index.php?logout='1'" style="color: black;">Logout</a>
+   </nav>
+   <script>
+    function myfunctions(){
+ alert("Login Successfully");
+    }
+    </script>
+</header>
+<!-- header section ends -->
+<!-- pricing section starts  -->
+
+<section class="pricing" id="pricing">
+
+   <h1 class="heading"> our pricing </h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <i class="fas fa-home"></i>
+         <h3>basic plan</h3>
+         <div class="price"><span>Rs.</span>25000<span>/month</span></div>
+         <div class=""><span><h3>Advance Payment      </h3></span><h2>Rs.5000</h2><span></span></div>
+         <div class="list">
+            <p>interior design</p>
+            <p>refurbishment</p>
+            <p>material supply</p>
+            <p>maintenance</p>
+            <p>24/7 support</p>
+         </div>
+         <a href="https://buy.stripe.com/test_6oEeWkgI5fVH23u7ss" class="btn">choose plan</a>
+      </div>
+
+      <div class="box">
+         <i class="fas fa-building"></i>
+         <h3>premium plan</h3>
+         <div class="price"><span>Rs.</span>65000<span>/month</span></div>
+         <div class=""><span><h3>Advance Payment      </h3></span><h2>Rs.20000</h2><span></span></div>
+         <div class="list">
+            <p>interior design</p>
+            <p>refurbishment</p>
+            <p>material supply</p>
+            <p>maintenance</p>
+            <p>24/7 support</p>
+         </div>
+
+
+
+
+         <a href="https://buy.stripe.com/test_6oEeWkgI5fVH23u7ss" class="btn">choose plan</a>
+      </div>
+
+      <div class="box">
+         <i class="fas fa-city"></i>
+         <h3>ultimate plan</h3>
+         <div class="price"><span>Rs.</span>125000<span>/month</span></div>
+         <div class=""><span><h3>Advance Payment      </h3></span><h2>Rs.50000</h2><span></span></div>
+         <div class="list">
+            <p>interior design</p>
+            <p>refurbishment</p>
+            <p>material supply</p>
+            <p>maintenance</p>
+            <p>24/7 support</p>
+         </div>
+         <a href="https://buy.stripe.com/test_6oEeWkgI5fVH23u7ss" class="btn">choose plan</a>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- pricing section ends -->
+
+<section class="logo-container">
+    <div class="swiper logo-slider">
+       <div class="swiper-wrapper">
+          <div class="swiper-slide slide"><img src="images/client-logo-1.png" alt=""></div>
+          <div class="swiper-slide slide"><img src="images/client-logo-2.png" alt=""></div>
+          <div class="swiper-slide slide"><img src="images/client-logo-3.png" alt=""></div>
+          <div class="swiper-slide slide"><img src="images/client-logo-4.png" alt=""></div>
+          <div class="swiper-slide slide"><img src="images/client-logo-5.png" alt=""></div>
+          <div class="swiper-slide slide"><img src="images/client-logo-6.png" alt=""></div>
+       </div>
+    </div>
+ </section>
+<!-- footer section starts  -->
+
+<section class="footer">
+   <div class="credit"> created by <span style="font-family: cursive;">Sudharshini.B , Navanitha.S , Subash.S  </span>  | all rights reserved! </div>
+</section>
+
+<!-- footer section ends -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+<script>
+
+lightGallery(document.querySelector('.projects .box-container'));
+
+</script>
+<script>
+
+let navbar = document.querySelector('.header .navbar');
+let searchForm = document.querySelector('.header .search-form');
+let loginForm = document.querySelector('.header .login-form');
+let contactInfo = document.querySelector('.contact-info');
+
+document.querySelector('#menu-btn').onclick = () =>{
+   navbar.classList.toggle('active');
+   searchForm.classList.remove('active');
+   loginForm.classList.remove('active');
+};
+
+document.querySelector('#search-btn').onclick = () =>{
+   searchForm.classList.toggle('active');
+   navbar.classList.remove('active');
+   loginForm.classList.remove('active');
+};
+
+document.querySelector('#login-btn').onclick = () =>{
+   loginForm.classList.toggle('active');
+   navbar.classList.remove('active');
+   searchForm.classList.remove('active'); 
+};
+
+document.querySelector('#info-btn').onclick = () =>{
+   contactInfo.classList.add('active');
+}
+
+document.querySelector('#close-contact-info').onclick = () =>{
+   contactInfo.classList.remove('active');
+}
+
+window.onscroll = () =>{
+   navbar.classList.remove('active');
+   searchForm.classList.remove('active');
+   loginForm.classList.remove('active');
+   contactInfo.classList.remove('active');
+}
+
+var swiper = new Swiper(".home-slider", {
+   loop:true,
+   grabCursor:true,
+   navigation: {
+     nextEl: ".swiper-button-next",
+     prevEl: ".swiper-button-prev",
+   },
+});
+
+var swiper = new Swiper(".reviews-slider", {
+   loop:true,
+   grabCursor:true,
+   spaceBetween: 20,
+   breakpoints: {
+      640: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 3,
+      },
+   },
+});
+
+var swiper = new Swiper(".blogs-slider", {
+   loop:true,
+   grabCursor:true,
+   spaceBetween: 20,
+   breakpoints: {
+      640: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 3,
+      },
+   },
+});
+
+var swiper = new Swiper(".logo-slider", {
+   loop:true,
+   grabCursor:true,
+   spaceBetween: 20,
+   breakpoints: {
+      450: {
+         slidesPerView: 2,
+       },
+      640: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      1000: {
+        slidesPerView: 5,
+      },
+   },
+});
+
+</script>
+</body>
+</html>
